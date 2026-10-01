@@ -20,7 +20,7 @@
     <!-- Top Announcement Ticker -->
     <div class="dev-ticker">
       <div class="contenedor dev-ticker__content">
-        <span>⚡ Envíos gratis a todo el mundo en compras mayores a $50 USD</span>
+        <span><svg class="inline-icon" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Envíos gratis a todo el mundo en compras mayores a $50 USD</span>
         <span>•</span>
         <span>Código: <span class="highlight">GIT_PUSH_2026</span> para 15% OFF</span>
         <span>•</span>
@@ -67,16 +67,34 @@
       <div class="contenedor">
         <div class="hero-box">
           <div class="hero-text-col">
-            <span class="hero-tag">⚡ COLECCIÓN 2026 // DROP EXCLUSIVO</span>
+            <span class="hero-tag">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" style="vertical-align: -1px; margin-right: 4px;"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              COLECCIÓN 2026 // DROP EXCLUSIVO
+            </span>
             <h2 class="hero-title">Ropa de Calidad Diseñada para <em>Desarrolladores</em></h2>
             <p class="hero-desc">
               Viste con el orgullo de tus tecnologías favoritas. Cada camiseta está confeccionada en 100% algodón ring-spun peinado de 200g con serigrafía DTG de alta durabilidad resistente a lavados continuos.
             </p>
 
             <div class="hero-perks">
-              <div class="perk-item"><span class="perk-icon">✓</span> 100% Algodón Premium</div>
-              <div class="perk-item"><span class="perk-icon">✓</span> Estampado Serigráfico Suave</div>
-              <div class="perk-item"><span class="perk-icon">✓</span> Garantía de Calce Perfecto</div>
+              <div class="perk-item">
+                <span class="perk-icon">
+                  <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                100% Algodón Premium
+              </div>
+              <div class="perk-item">
+                <span class="perk-icon">
+                  <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                Estampado Serigráfico Suave
+              </div>
+              <div class="perk-item">
+                <span class="perk-icon">
+                  <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                Garantía de Calce Perfecto
+              </div>
             </div>
           </div>
 
@@ -164,7 +182,7 @@
         <!-- 3. React -->
         <article class="producto" data-category="frameworks">
           <div class="producto__imagen-wrap">
-            <span class="badge-code badge-code--mint producto__tag">Popular ★</span>
+            <span class="badge-code badge-code--mint producto__tag">Popular <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:-1px; margin-left:3px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
             <a href="producto3.html">
               <img class="producto__imagen" src="img/3.jpg" alt="Camiseta React" loading="lazy">
             </a>
@@ -343,7 +361,7 @@
         <!-- 10. TypeScript -->
         <article class="producto" data-category="languages">
           <div class="producto__imagen-wrap">
-            <span class="badge-code badge-code--mint producto__tag">Best Seller ★</span>
+            <span class="badge-code badge-code--mint producto__tag">Best Seller <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:-1px; margin-left:3px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
             <a href="producto10.html">
               <img class="producto__imagen" src="img/10.jpg" alt="Camiseta TypeScript" loading="lazy">
             </a>
@@ -394,7 +412,7 @@
         <!-- 12. JavaScript -->
         <article class="producto" data-category="languages">
           <div class="producto__imagen-wrap">
-            <span class="badge-code badge-code--mint producto__tag">Icónico ★</span>
+            <span class="badge-code badge-code--mint producto__tag">Icónico <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:-1px; margin-left:3px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
             <a href="producto12.html">
               <img class="producto__imagen" src="img/12.jpg" alt="Camiseta JavaScript" loading="lazy">
             </a>
@@ -495,7 +513,9 @@
       <div class="cart-drawer">
         <div class="cart-drawer__header">
           <h3>Tu Carrito de Compras</h3>
-          <button id="cart-close-btn" class="cart-close-btn" aria-label="Cerrar carrito">&times;</button>
+          <button id="cart-close-btn" class="cart-close-btn" aria-label="Cerrar carrito">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
         </div>
 
         <div id="cart-items-list" class="cart-items-list">
@@ -540,9 +560,36 @@
 
           <div class="footer-col">
             <h4>Garantía Developer</h4>
-            <p style="margin-bottom: 0.6rem;">🔒 Pagos seguros con Stripe y PayPal.</p>
-            <p style="margin-bottom: 0.6rem;">📦 Envíos con tracking internacional 24/7.</p>
-            <p>✨ 30 días de garantía sin preguntas.</p>
+            <div class="guarantee-list">
+              <div class="guarantee-item">
+                <span class="guarantee-icon">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                  </svg>
+                </span>
+                <span>Pagos seguros con Stripe y PayPal</span>
+              </div>
+              <div class="guarantee-item">
+                <span class="guarantee-icon">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </span>
+                <span>Envíos con tracking internacional 24/7</span>
+              </div>
+              <div class="guarantee-item">
+                <span class="guarantee-icon">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                  </svg>
+                </span>
+                <span>30 días de garantía sin preguntas</span>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -81,7 +81,7 @@ function initCart() {
       const price = parseFloat(btn.dataset.price || '25');
       const img = btn.dataset.img;
       addToCart({ id, title, price, img, size: 'M', qty: 1 });
-      showToast(`⚡ ¡${title} (Talla M) añadida al carrito!`);
+      showToast(`¡${title} (Talla M) añadida al carrito!`, 'success');
     });
   });
 
@@ -97,7 +97,7 @@ function initCart() {
       const qty = parseInt(document.getElementById('product-qty')?.value || '1', 10);
 
       addToCart({ id: title.toLowerCase(), title, price, img, size: activeSize, qty });
-      showToast(`🛒 ¡${title} (Talla ${activeSize} × ${qty}) añadida al carrito!`);
+      showToast(`¡${title} (Talla ${activeSize} × ${qty}) añadida al carrito!`, 'success');
       openCart();
     });
   }
@@ -105,14 +105,14 @@ function initCart() {
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       if (cart.length === 0) {
-        showToast('⚠️ Tu carrito está vacío. Agrega una camiseta primero.');
+        showToast('Tu carrito está vacío. Agrega una camiseta primero.', 'warning');
         return;
       }
       const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
       cart = [];
       updateCartUI();
       closeCart();
-      showToast(`🎉 ¡Pedido simulado de $${total}.00 USD confirmado con éxito!`);
+      showToast(`¡Pedido simulado de $${total}.00 USD confirmado con éxito!`, 'success');
     });
   }
 }
@@ -160,8 +160,12 @@ function updateCartUI() {
 
   if (cart.length === 0) {
     list.innerHTML = `
-      <div style="text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
-        <p style="font-size: 3.5rem; margin-bottom: 1rem;">📦</p>
+      <div style="text-align: center; padding: 4.5rem 1rem; color: var(--text-muted);">
+        <div style="width: 6.4rem; height: 6.4rem; margin: 0 auto 1.6rem; border-radius: 50%; background: var(--color-primary-light); color: var(--color-primary); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(25, 118, 210, 0.2);">
+          <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+        </div>
         <h4 style="font-size: 1.8rem; color: var(--text-dark); margin-bottom: 0.5rem;">Tu carrito está vacío</h4>
         <p style="font-size: 1.4rem;">Explora nuestra colección y viste con el orgullo de programar.</p>
       </div>
@@ -183,7 +187,9 @@ function updateCartUI() {
           <div style="font-size: 1.25rem; color: var(--text-muted); font-family: var(--font-code);">Talla: ${item.size} • Cant: ${item.qty}</div>
           <div class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</div>
         </div>
-        <button class="cart-item-remove" onclick="removeFromCart(${index})" title="Eliminar">&times;</button>
+        <button class="cart-item-remove" onclick="removeFromCart(${index})" title="Eliminar" aria-label="Eliminar item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+        </button>
       </div>
     `;
   });
@@ -261,7 +267,7 @@ function initSizeSelector() {
 /* --------------------------------------------------------------------------
    Toast Utility
 -------------------------------------------------------------------------- */
-function showToast(message) {
+function showToast(message, type = 'success') {
   let toast = document.querySelector('.toast-msg');
   if (!toast) {
     toast = document.createElement('div');
@@ -269,7 +275,11 @@ function showToast(message) {
     document.body.appendChild(toast);
   }
 
-  toast.textContent = message;
+  const iconSvg = type === 'warning'
+    ? `<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" style="color:#f59e0b; flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>`
+    : `<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" style="color:var(--color-accent-mint); flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`;
+
+  toast.innerHTML = `${iconSvg}<span>${message}</span>`;
   toast.classList.add('show');
 
   setTimeout(() => {

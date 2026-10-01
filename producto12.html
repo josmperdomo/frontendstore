@@ -14,7 +14,7 @@
     <!-- Top Announcement Ticker -->
     <div class="dev-ticker">
       <div class="contenedor dev-ticker__content">
-        <span>⚡ Envíos gratis a todo el mundo en compras mayores a $50 USD</span>
+        <span><svg class="inline-icon" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Envíos gratis a todo el mundo en compras mayores a $50 USD</span>
         <span>•</span>
         <span>Código: <span class="highlight">GIT_PUSH_2026</span> para 15% OFF</span>
         <span>•</span>
@@ -73,7 +73,7 @@
         <!-- Info & Buy Column -->
         <div class="product-info-wrap">
           <div class="product-meta-header">
-            <span class="badge-code badge-code--mint">Icónico ★</span>
+            <span class="badge-code badge-code--mint">Icónico <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:-1px; margin-left:3px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
             <span style="margin-left: 0.8rem; font-family: var(--font-code); font-size: 1.25rem; color: var(--text-muted);">The Language of Web</span>
           </div>
 
@@ -102,19 +102,31 @@
             </button>
           </div>
 
-          <!-- Specs -->
+                    <!-- Specs -->
           <div class="fabric-specs">
             <div class="spec-item">
-              <span style="color:var(--color-accent-mint);">✓</span> 100% Algodón Peinado (200g)
+              <span class="spec-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              100% Algodón Peinado (200g)
             </div>
             <div class="spec-item">
-              <span style="color:var(--color-accent-mint);">✓</span> Serigrafía Ecológica al Agua
+              <span class="spec-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+              </span>
+              Serigrafía Ecológica al Agua
             </div>
             <div class="spec-item">
-              <span style="color:var(--color-accent-mint);">✓</span> Lavable a máquina en frío
+              <span class="spec-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </span>
+              Lavable a máquina en frío
             </div>
             <div class="spec-item">
-              <span style="color:var(--color-accent-mint);">✓</span> Devolución en 30 días
+              <span class="spec-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </span>
+              Devolución en 30 días
             </div>
           </div>
         </div>
@@ -126,7 +138,9 @@
       <div class="cart-drawer">
         <div class="cart-drawer__header">
           <h3>Tu Carrito de Compras</h3>
-          <button id="cart-close-btn" class="cart-close-btn" aria-label="Cerrar carrito">&times;</button>
+          <button id="cart-close-btn" class="cart-close-btn" aria-label="Cerrar carrito">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
         </div>
 
         <div id="cart-items-list" class="cart-items-list">
@@ -169,11 +183,38 @@
             </ul>
           </div>
 
-          <div class="footer-col">
+                    <div class="footer-col">
             <h4>Garantía Developer</h4>
-            <p style="margin-bottom: 0.6rem;">🔒 Pagos seguros con Stripe y PayPal.</p>
-            <p style="margin-bottom: 0.6rem;">📦 Envíos con tracking internacional 24/7.</p>
-            <p>✨ 30 días de garantía sin preguntas.</p>
+            <div class="guarantee-list">
+              <div class="guarantee-item">
+                <span class="guarantee-icon">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                  </svg>
+                </span>
+                <span>Pagos seguros con Stripe y PayPal</span>
+              </div>
+              <div class="guarantee-item">
+                <span class="guarantee-icon">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </span>
+                <span>Envíos con tracking internacional 24/7</span>
+              </div>
+              <div class="guarantee-item">
+                <span class="guarantee-icon">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                  </svg>
+                </span>
+                <span>30 días de garantía sin preguntas</span>
+              </div>
+            </div>
           </div>
         </div>
 
